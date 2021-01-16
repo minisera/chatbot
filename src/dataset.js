@@ -1,80 +1,60 @@
 const defaultDataset = {
   "init": {
       answers: [
-          {content: "仕事を依頼したい", nextId: "job_offer"},
-          {content: "エンジニアのキャリアについて相談したい", nextId: "consultant"},
-          {content: "学習コミュニティについて知りたい", nextId: "community"},
-          {content: "お付き合いしたい", nextId: "dating"},
+          {content: "大高の開発技術について知りたい", nextId: "skill"},
+          {content: "大高のプライベートについて知りたい", nextId: "private"},
+          {content: "大高とお付き合い前提で話したい", nextId: "dating"},
       ],
-      question: "こんにちは！🐯トラハックへのご用件はなんでしょうか？",
+      question: "こんにちは！ご用件はなんでしょうか？",
   },
-  "job_offer": {
+  "skill": {
       answers: [
-          {content: "Webサイトを制作してほしい", nextId: "website"},
-          {content: "Webアプリを開発してほしい", nextId: "webapp"},
-          {content: "自動化ツールを作ってほしい", nextId: "automation_tool"},
-          {content: "その他", nextId: "other_jobs"}
-      ],
-      question: "どのようなお仕事でしょうか？",
-  },
-  "website": {
-      answers: [
-          {content: "問い合わせる", nextId: "contact"},
+          {content: "GitHubで技術力を詳しく見る", nextId: "https://github.com/minisera"},
+          {content: "Qiitaでアウトプットを見る", nextId: "https://qiita.com/minisera"},
+          {content: "Twitterで日常を見る", nextId: "https://twitter.com/minimum_pg"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "Webサイト細作についてですね。コチラからお問い合わせできます。",
+      question: "開発技術はサーバーエンドはRuby、Ruby on Rails、フロントエンドはJavaScript、React、インフラはAWSを使用します。大高について詳しく知りたい方は、下記から選択して下さい。",
   },
-  "webapp": {
+  "private": {
       answers: [
-          {content: "問い合わせる", nextId: "contact"},
+          {content: "好きな食べ物は？", nextId: "food"},
+          {content: "好きな言葉は？", nextId: "word"},
+          {content: "趣味は？", nextId: "hobby"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "Webアプリ開発についてですね。コチラからお問い合わせできます。",
+      question: "質問を選んで下さい。",
   },
-  "automation_tool": {
+  "food": {
       answers: [
-          {content: "問い合わせる", nextId: "contact"},
+          {content: "本人に話しかける", nextId: "https://twitter.com/minimum_pg"},
+          {content: "他の質問をする", nextId: "private"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "自動化ツール開発についてですね。コチラからお問い合わせできます。",
+      question: "好きな食べ物は、1位唐揚げ、2位イカそうめん、3位たこ焼き、です。ちなみに唐揚げは2位と100票ほど差を付けています。",
   },
-  "other_jobs": {
+  "word": {
       answers: [
-          {content: "問い合わせる", nextId: "contact"},
+          {content: "本人に話しかける", nextId: "https://twitter.com/minimum_pg"},
+          {content: "他の質問をする", nextId: "private"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "その他についてですね。コチラからお問い合わせできます。",
+      question: "好きな言葉は「足るを知る」。現状に感謝し、満足するがモットーです。",
   },
-  "consultant": {
+  "hobby": {
       answers: [
-          {content: "YouTubeで動画を見る", nextId: "https://www.youtube.com/channel/UC-bOAxx-YOsviSmqh8COR0w"},
-          {content: "学習コミュニティについて知りたい", nextId: "community"},
+          {content: "本人に話しかける", nextId: "https://twitter.com/minimum_pg"},
+          {content: "他の質問をする", nextId: "private"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "トラハックは普段からYouTubeでキャリアについて発信しています。また、僕が運営するエンジニア向け学習コミュニティ内でも相談に乗っていますよ。",
-  },
-  "community": {
-      answers: [
-          {content: "どんな活動をしているの？", nextId: "community_activity"},
-          {content: "コミュニティに参加したい", nextId: "https://torahack.web.app/community/"},
-          {content: "最初の質問に戻る", nextId: "init"}
-      ],
-      question: "2020年3月から学習コミュニティを始めました！🎉Webエンジニアへの転職を目指す人向けに、プログラミングを教えたりキャリアの相談に乗っています。",
-  },
-  "community_activity": {
-      answers: [
-          {content: "さらに詳細を知りたい", nextId: "https://youtu.be/tIzE7hUDbBM"},
-          {content: "コミュニティに参加したい", nextId: "https://torahack.web.app/community/"},
-          {content: "最初の質問に戻る", nextId: "init"}
-      ],
-      question: "フロントエンド向けの教材の提供、キャリアや勉強法に関するメルマガの配信、週1のオンライン作業会などを開催しています！\n詳細はYouTube動画で紹介しています。",
+      question: "趣味は断舎離とキャンプです。断舎離は物が洗練されていく過程を楽しみます。",
   },
   "dating": {
       answers: [
-          {content: "DMする", nextId: "https://twitter.com/torahack_"},
+          {content: "本気でDMする", nextId: "https://twitter.com/minimum_pg"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "まずは一緒にランチでもいかがですか？DMしてください😘",
+      question: "是非！！！DMお待ちしてます！！！！！！！",
   },
 }
 
